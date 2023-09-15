@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnPlay = UIButton(frame: CGRect(x: 50, y: 50, width: 200, height: 50))
+        btnPlay = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
         btnPlay?.backgroundColor = .lightGray
         btnPlay?.setTitle("Play", for: .normal)
         btnPlay?.addTarget(
