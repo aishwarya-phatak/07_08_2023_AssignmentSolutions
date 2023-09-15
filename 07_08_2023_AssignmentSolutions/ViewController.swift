@@ -11,9 +11,24 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var avPlayer : AVPlayer?
+    var btnPlay : UIButton?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnPlay = UIButton(frame: CGRect(x: 50, y: 50, width: 200, height: 50))
+        btnPlay?.backgroundColor = .lightGray
+        btnPlay?.setTitle("Play", for: .normal)
+        btnPlay?.addTarget(
+            self,
+            action: #selector(btnPlayClick),
+            for: UIControl.Event.touchUpInside)
+        self.view.addSubview(btnPlay!)
+    }
+    
+    @objc func btnPlayClick(){
+        playAudio(nameOfAudioFile: "audio_file")
     }
     
     @IBAction func btnPlayAudio(_ sender: UIButton) {
